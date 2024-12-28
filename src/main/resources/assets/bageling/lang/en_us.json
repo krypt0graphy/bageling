@@ -1,0 +1,13 @@
+{
+  "item.bageling.bagel": "Bagel",
+  "item.bageling.throwable_bagel": "Spider-man's Bagel",
+  "item.bageling.cheese_bagel": "Bagel with Cream Cheese",
+  "item.bageling.bagel_dough": "Bagel Dough",
+
+  "block.bageling.bagel_block": "Bagel Stack",
+
+  "entity.bageling.throwable_bagel": "Spider-man's Bagel",
+
+  "sounds.bageling.bonk": "Player was hit by a bagel",
+  "sounds.bageling.throw": "Bagel flies"
+}

@@ -1,0 +1,13 @@
+{
+  "item.bageling.bagel": "Bagel",
+  "item.bageling.throwable_bagel": "Spider-man si Bagel",
+  "item.bageling.cheese_bagel": "Bagel med kremost",
+  "item.bageling.bagel_dough": "Bagel deig",
+
+  "block.bageling.bagel_block": "Haug av Baglar",
+
+  "entity.bageling.throwable_bagel": "Spider-man si Bagel",
+
+  "sounds.bageling.bonk": "Spelar ble treft av ein bagel",
+  "sounds.bageling.throw": "Bagel flyr"
+}

@@ -1,0 +1,14 @@
+{
+  "item.bageling.bagel": "Багель",
+  "item.bageling.throwable_bagel": "Багель Людини-павука",
+  "item.bageling.cheese_bagel": "Багель з крем-сиром",
+  "item.bageling.bagel_dough": "Тісто для багеля",
+
+  "block.bageling.bagel_block": "Стіс багелів",
+
+
+  "entity.bageling.throwable_bagel": "Багель Людини-павука",
+
+  "sounds.bageling.bonk": "Гравця вдарено багелем",
+  "sounds.bageling.throw": "Багель летить"
+}
