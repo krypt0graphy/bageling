@@ -1,0 +1,13 @@
+{
+  "item.funnybagelmod.bagel": "Bagel",
+  "item.funnybagelmod.throwable_bagel": "Spider-man's Bagel",
+  "item.funnybagelmod.cheese_bagel": "Bagel with Cream Cheese",
+  "item.funnybagelmod.bagel_dough": "Bagel Dough",
+
+  "block.funnybagelmod.bagel_block": "Bagel Stack",
+
+  "entity.funnybagelmod.throwable_bagel": "Spider-man's Bagel",
+
+  "sounds.funnybagelmod.bonk": "Player was hit by a bagel",
+  "sounds.funnybagelmod.throw": "Bagel flies"
+}

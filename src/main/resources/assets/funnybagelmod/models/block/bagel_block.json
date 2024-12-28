@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "funnybagelmod:block/bagel_block_bottom",
+    "side": "funnybagelmod:block/bagel_block_side",
+    "top": "funnybagelmod:block/bagel_block_top"
+  }
+}

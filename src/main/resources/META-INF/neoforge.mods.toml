@@ -1,0 +1,26 @@
+
+modLoader="javafml" #mandatory
+loaderVersion="${loader_version_range}" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+[[mods]] #mandatory
+modId="funnybagelmod" #mandatory
+version="1.1.0" #mandatory
+displayName="Funny Bagel Mod" #mandatory
+logoFile="logo.png" #optional
+issueTrackerURL="https://github.com/krypt0graphy/funny-bagel-mod/issues" #optional
+
+
+authors="Krypto, Evo" #optional
+description='''Adds bagels to minecraft.'''
+[[dependencies.funnybagelmod]] #optional
+modId="neoforge" #mandatory
+mandatory=true #mandatory
+versionRange="${neo_version_range}" #mandatory
+ordering="NONE"
+side="BOTH"
+[[dependencies.funnybagelmod]]
+modId="minecraft"
+mandatory=true
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"

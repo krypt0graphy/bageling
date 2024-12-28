@@ -1,0 +1,14 @@
+{
+  "item.funnybagelmod.bagel": "Багель",
+  "item.funnybagelmod.throwable_bagel": "Багель Людини-павука",
+  "item.funnybagelmod.cheese_bagel": "Багель з крем-сиром",
+  "item.funnybagelmod.bagel_dough": "Тісто для багеля",
+
+  "block.funnybagelmod.bagel_block": "Стіс багелів",
+
+
+  "entity.funnybagelmod.throwable_bagel": "Багель Людини-павука",
+
+  "sounds.funnybagelmod.bonk": "Гравця вдарено багелем",
+  "sounds.funnybagelmod.throw": "Багель летить"
+}

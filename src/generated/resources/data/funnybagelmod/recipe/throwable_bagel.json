@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "funnybagelmod:bagel"
+    },
+    "s": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "bbb",
+    "bsb",
+    "bbb"
+  ],
+  "result": {
+    "count": 8,
+    "id": "funnybagelmod:throwable_bagel"
+  }
+}

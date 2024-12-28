@@ -1,0 +1,13 @@
+{
+  "item.funnybagelmod.bagel": "Bagel",
+  "item.funnybagelmod.throwable_bagel": "Spider-man si Bagel",
+  "item.funnybagelmod.cheese_bagel": "Bagel med kremost",
+  "item.funnybagelmod.bagel_dough": "Bagel deig",
+
+  "block.funnybagelmod.bagel_block": "Haug av Baglar",
+
+  "entity.funnybagelmod.throwable_bagel": "Spider-man si Bagel",
+
+  "sounds.funnybagelmod.bonk": "Spelar ble treft av ein bagel",
+  "sounds.funnybagelmod.throw": "Bagel flyr"
+}
