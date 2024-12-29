@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 public enum Mods {
     FARMERSDELIGHT,
     CREATE;
-    private final String id;
+    public final String id;
 
     Mods() {
         id = name().toLowerCase();
@@ -30,4 +30,7 @@ public enum Mods {
         }
     }
 
+    public String id() {
+        return id;
+    }
 }

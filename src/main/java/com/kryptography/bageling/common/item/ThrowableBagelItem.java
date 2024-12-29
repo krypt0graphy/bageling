@@ -5,6 +5,7 @@ import com.kryptography.bageling.common.entity.projectile.ThrowableBagel;
 import com.kryptography.bageling.init.ModItems;
 
 
+import com.kryptography.bageling.init.ModSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -23,7 +24,7 @@ public class ThrowableBagelItem extends Item {
     }
     public InteractionResultHolder<ItemStack> use(Level worldIn, Player playerIn, InteractionHand handIn) {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
-        worldIn.playSound((Player)null, playerIn.getX(), playerIn.getY(), playerIn.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (worldIn.getRandom().nextFloat() * 0.4F + 0.8F));
+        worldIn.playSound((Player)null, playerIn.getX(), playerIn.getY(), playerIn.getZ(), ModSounds.THROW.get(), SoundSource.NEUTRAL, 0.5F, 0.4F / (worldIn.getRandom().nextFloat() * 0.4F + 0.8F));
         if (!playerIn.getAbilities().instabuild) {
             itemstack.shrink(1);
         }

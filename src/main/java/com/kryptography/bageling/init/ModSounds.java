@@ -13,4 +13,5 @@ public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, Bageling.MODID);
 
     public static final Supplier<SoundEvent> BONK = SOUNDS.register("bonk", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Bageling.MODID, "bonk")));
+    public static final Supplier<SoundEvent> THROW = SOUNDS.register("throw", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Bageling.MODID, "throw")));
 }

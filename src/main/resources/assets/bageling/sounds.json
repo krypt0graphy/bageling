@@ -4,5 +4,11 @@
     "sounds": [
       "bageling:bonk"
     ]
+  },
+  "throw": {
+    "subtitle": "sounds.bageling.throw",
+    "sounds": [
+      "minecraft:random/bow"
+    ]
   }
 }
