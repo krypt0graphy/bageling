@@ -4,7 +4,6 @@ import com.kryptography.bageling.Bageling;
 import com.kryptography.bageling.common.tags.item.CommonTags;
 import com.kryptography.bageling.init.ModBlocks;
 import com.kryptography.bageling.init.ModItems;
-import com.kryptography.bageling.integration.Mods;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;

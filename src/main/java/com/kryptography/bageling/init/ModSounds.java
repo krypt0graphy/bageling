@@ -1,7 +1,6 @@
 package com.kryptography.bageling.init;
 
 import com.kryptography.bageling.Bageling;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.registries.DeferredRegister;

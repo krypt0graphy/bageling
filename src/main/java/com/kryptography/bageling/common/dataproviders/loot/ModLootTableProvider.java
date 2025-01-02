@@ -2,17 +2,11 @@ package com.kryptography.bageling.common.dataproviders.loot;
 
 import com.kryptography.bageling.Bageling;
 import com.kryptography.bageling.init.ModBlocks;
-import net.minecraft.core.Holder;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 

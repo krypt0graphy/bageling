@@ -4,7 +4,6 @@ package com.kryptography.bageling.init;
 import net.minecraft.resources.ResourceLocation;
 import com.kryptography.bageling.Bageling;
 import com.kryptography.bageling.common.entity.projectile.ThrowableBagel;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;

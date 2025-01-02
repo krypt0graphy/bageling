@@ -6,13 +6,9 @@ import com.kryptography.bageling.common.item.ThrowableBagelItem;
 import com.kryptography.bageling.integration.Mods;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-
-import java.util.Optional;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Bageling.MODID);
