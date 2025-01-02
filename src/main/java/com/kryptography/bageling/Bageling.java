@@ -3,8 +3,9 @@ package com.kryptography.bageling;
 import com.kryptography.bageling.client.ClientEvents;
 import com.kryptography.bageling.init.*;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 
 @Mod(Bageling.MODID)
@@ -15,7 +16,10 @@ public class Bageling {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 
-    public Bageling(IEventBus bus) {
+    public Bageling() {
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+
         ModItems.ITEMS.register(bus);
         ModBlocks.BLOCKS.register(bus);
         ModEntityTypes.ENTITTIES.register(bus);

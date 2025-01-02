@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "bageling:bagel"
+    },
+    {
+      "item": "bageling:bagel"
+    },
+    {
+      "item": "bageling:bagel"
+    },
+    {
+      "tag": "forge:milk"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "bageling:cream_cheese_bagel"
+  }
+}

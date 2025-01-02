@@ -4,9 +4,8 @@ import com.kryptography.bageling.Bageling;
 import com.kryptography.bageling.init.ModItems;
 import com.kryptography.bageling.integration.Mods;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.common.data.internal.NeoForgeItemTagsProvider;
+import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -20,7 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SPIDERMANS_BAGEL.get());
 
         if (Mods.FARMERSDELIGHT.isLoaded() || Mods.CREATE.isLoaded()) {
-            basicItem(ModItems.BAGEL_DOUGH.get().value());
+            basicItem(ModItems.BAGEL_DOUGH.get());
         }
     }
 }

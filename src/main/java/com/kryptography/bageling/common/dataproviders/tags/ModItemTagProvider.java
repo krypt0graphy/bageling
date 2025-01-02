@@ -6,7 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.Tags;
+
 
 import java.util.concurrent.CompletableFuture;
 
@@ -18,10 +18,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(CommonTags.FOODS_DOUGH)
-                .add(ModItems.BAGEL_DOUGH.get().value());
-
-        tag(Tags.Items.FOODS)
-                .addTag(CommonTags.FOODS_DOUGH)
-                .add(ModItems.BAGEL.value());
-        }
+                .add(ModItems.BAGEL_DOUGH.get());
+    }
 }

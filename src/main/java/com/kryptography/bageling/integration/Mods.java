@@ -1,6 +1,7 @@
 package com.kryptography.bageling.integration;
 
-import net.neoforged.fml.ModList;
+import net.minecraftforge.fml.ModList;
+
 
 import java.util.Optional;
 import java.util.function.Supplier;

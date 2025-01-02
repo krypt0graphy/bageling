@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:cooked_bacon"
+    },
+    {
+      "tag": "forge:cooked_eggs"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "bageling:bagel"
+    }
+  ],
+  "result": {
+    "item": "bageling:bacon_egg_cheese_bagel"
+  }
+}

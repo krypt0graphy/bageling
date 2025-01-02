@@ -6,7 +6,6 @@ import com.kryptography.bageling.init.ModItems;
 
 
 import com.kryptography.bageling.init.ModSounds;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;

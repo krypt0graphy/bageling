@@ -7,14 +7,14 @@ import net.minecraft.world.item.Item;
 
 public class CommonTags {
 
-    public static final TagKey<Item> FOODS_MILK = commonItemTag("foods/milk");
-    public static final TagKey<Item> FOODS_DOUGH = commonItemTag("foods/dough");
-    public static final TagKey<Item> FOODS_TOMATO = commonItemTag("foods/tomato");
-    public static final TagKey<Item> FOODS_RAW_SALMON = commonItemTag("foods/raw_salmon");
-    public static final TagKey<Item> FOODS_COOKED_BACON = commonItemTag("foods/cooked_bacon");
-    public static final TagKey<Item> FOODS_COOKED_EGG = commonItemTag("foods/cooked_egg");
+    public static final TagKey<Item> FOODS_MILK = commonItemTag("milk");
+    public static final TagKey<Item> FOODS_DOUGH = commonItemTag("dough");
+    public static final TagKey<Item> FOODS_TOMATO = commonItemTag("vegetables/tomato");
+    public static final TagKey<Item> FOODS_RAW_SALMON = commonItemTag("raw_fishes/salmon");
+    public static final TagKey<Item> FOODS_COOKED_BACON = commonItemTag("cooked_bacon");
+    public static final TagKey<Item> FOODS_COOKED_EGG = commonItemTag("cooked_eggs");
 
     private static TagKey<Item> commonItemTag(String path) {
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", path));
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", path));
     }
 }

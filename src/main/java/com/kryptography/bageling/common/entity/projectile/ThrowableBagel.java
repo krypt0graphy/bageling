@@ -21,10 +21,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class ThrowableBagel extends ThrowableItemProjectile{
 
@@ -98,8 +98,4 @@ public class ThrowableBagel extends ThrowableItemProjectile{
         return new ItemStack(ModItems.SPIDERMANS_BAGEL.get());
     }
 
-    @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket(ServerEntity p_352459_) {
-        return super.getAddEntityPacket(p_352459_);
-    }
 }

@@ -1,18 +1,26 @@
 package com.kryptography.bageling.common.dataproviders.loot;
 
+import com.kryptography.bageling.Bageling;
 import com.kryptography.bageling.init.ModBlocks;
 import net.minecraft.core.Holder;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class ModLootTableProvider extends BlockLootSubProvider {
 
-    public ModLootTableProvider(HolderLookup.Provider provider) {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), provider);
+
+    public ModLootTableProvider() {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
 
     @Override
@@ -22,6 +30,6 @@ public class ModLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+        return ForgeRegistries.BLOCKS.getValues().stream().filter(block -> ForgeRegistries.BLOCKS.getKey(block).getNamespace().equals(Bageling.MODID)).collect(Collectors.toList());
     }
 }

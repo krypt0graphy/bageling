@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:dough"
+    }
+  ],
+  "result": {
+    "item": "bageling:bagel_dough"
+  }
+}
