@@ -8,10 +8,13 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.crafting.ConditionalRecipe;
+import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
 
 import java.util.function.Consumer;
 
-public class ModRecipeProvider extends RecipeProvider{
+public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public ModRecipeProvider(PackOutput output) {
         super(output);
     }
@@ -48,10 +51,12 @@ public class ModRecipeProvider extends RecipeProvider{
                 .unlockedBy("has_bagel", has(ModItems.BAGEL.get()))
                 .save(consumer, Bageling.id("bagel").toString() + "_from_bagel_stack");
 
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BAGEL_DOUGH.get())
-                    .requires(CommonTags.FOODS_DOUGH)
-                    .unlockedBy("has_dough", has(CommonTags.FOODS_DOUGH))
-                    .save(consumer);
+        ConditionalRecipe.builder().addCondition(or(new ModLoadedCondition("create"), new ModLoadedCondition("farmersdelight"))).addRecipe(c ->
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BAGEL_DOUGH.get())
+                .requires(CommonTags.FOODS_DOUGH)
+                .unlockedBy("has_dough", has(CommonTags.FOODS_DOUGH))
+                .save(c)).generateAdvancement().build(consumer, Bageling.id("bagel_dough"));
+
 
         //Sandwiches
 
@@ -79,34 +84,45 @@ public class ModRecipeProvider extends RecipeProvider{
                 .unlockedBy("has_glow_berries", has(Items.GLOW_BERRIES))
                 .save(consumer);
 
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BACON_EGG_CHEESE_BAGEL.get())
-                    .requires(CommonTags.FOODS_COOKED_BACON)
-                    .requires(CommonTags.FOODS_COOKED_EGG)
-                    .requires(CommonTags.FOODS_MILK)
-                    .requires(ModItems.BAGEL.get())
-                    .unlockedBy("has_porkchop", has(Items.PORKCHOP))
-                    .save(consumer);
 
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALMON_BAGEL.get())
-                    .requires(CommonTags.FOODS_RAW_SALMON)
-                    .requires(CommonTags.FOODS_TOMATO)
-                    .requires(CommonTags.FOODS_MILK)
-                    .requires(ModItems.BAGEL.get())
-                    .unlockedBy("has_salmon", has(Items.SALMON))
-                    .save(consumer);
+        ConditionalRecipe.builder().addCondition(new ModLoadedCondition("farmersdelight")).addRecipe(c -> ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALMON_BAGEL.get())
+                .requires(CommonTags.FOODS_RAW_SALMON)
+                .requires(CommonTags.FOODS_TOMATO)
+                .requires(CommonTags.FOODS_MILK)
+                .requires(ModItems.BAGEL.get())
+                .unlockedBy("has_salmon", has(Items.SALMON))
+                .save(c)
+        ).generateAdvancement().build(consumer, Bageling.id("salmon_bagel"));
+        ConditionalRecipe.builder().addCondition(new ModLoadedCondition("farmersdelight")).addRecipe(c -> ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BACON_EGG_CHEESE_BAGEL.get())
+                .requires(CommonTags.FOODS_COOKED_BACON)
+                .requires(CommonTags.FOODS_COOKED_EGG)
+                .requires(CommonTags.FOODS_MILK)
+                .requires(ModItems.BAGEL.get())
+                .unlockedBy("has_bacon", has(CommonTags.FOODS_COOKED_BACON))
+                .save(c)
+        ).generateAdvancement().build(consumer, Bageling.id("bacon_egg_cheese_bagel") );
 
-
+        ConditionalRecipe.builder().addCondition(new ModLoadedCondition("neapolitan")).addRecipe(c ->
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.STRAWBERRY_JAM_BAGEL.get())
+                        .requires(ModItems.BAGEL.get())
+                        .requires(CommonTags.FRUITS_STRAWBERRY)
+                        .unlockedBy("has_strawberry", has(CommonTags.FRUITS_STRAWBERRY))
+                        .save(c)).generateAdvancement().build(consumer, Bageling.id("strawberry_bagel"));
 
         //Cooking recipes
-            SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.BAGEL_DOUGH.get()), RecipeCategory.FOOD,
-                            ModItems.BAGEL.get(), 0.35F, 150)
-                    .unlockedBy("has_bagel_dough", has(ModItems.BAGEL_DOUGH.get()))
-                    .save(consumer, Bageling.id("bagel").toString() + "_from_smelting");
 
-            SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.BAGEL_DOUGH.get()), RecipeCategory.FOOD,
-                            ModItems.BAGEL.get(), 0.35F, 75)
-                    .unlockedBy("has_bagel_dough", has(ModItems.BAGEL_DOUGH.get()))
-                    .save(consumer, Bageling.id("bagel").toString() + "_from_smoking");
+        ConditionalRecipe.builder().addCondition(or(new ModLoadedCondition("create"), new ModLoadedCondition("farmersdelight"))).addRecipe(c ->
+                SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.BAGEL_DOUGH.get()), RecipeCategory.FOOD,
+                                ModItems.BAGEL.get(), 0.35F, 150)
+                        .unlockedBy("has_bagel_dough", has(ModItems.BAGEL_DOUGH.get()))
+                        .save(c, Bageling.id("bagel").toString() + "_from_smelting")
+                ).generateAdvancement().build(consumer, Bageling.id("bagel_from_smelting"));
 
+        ConditionalRecipe.builder().addCondition(or(new ModLoadedCondition("create"), new ModLoadedCondition("farmersdelight"))).addRecipe(c ->
+                SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.BAGEL_DOUGH.get()), RecipeCategory.FOOD,
+                                ModItems.BAGEL.get(), 0.35F, 75)
+                        .unlockedBy("has_bagel_dough", has(ModItems.BAGEL_DOUGH.get()))
+                        .save(c, Bageling.id("bagel").toString() + "_from_smoking")
+        ).generateAdvancement().build(consumer, Bageling.id("bagel_from_smoking"));
     }
 }

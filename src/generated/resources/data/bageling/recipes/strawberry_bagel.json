@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "farmersdelight"
+          "modid": "neapolitan"
         }
       ],
       "recipe": {
@@ -13,20 +13,14 @@
         "category": "misc",
         "ingredients": [
           {
-            "tag": "forge:cooked_bacon"
-          },
-          {
-            "tag": "forge:cooked_eggs"
-          },
-          {
-            "tag": "forge:milk"
-          },
-          {
             "item": "bageling:bagel"
+          },
+          {
+            "tag": "forge:fruits/strawberry"
           }
         ],
         "result": {
-          "item": "bageling:bacon_egg_cheese_bagel"
+          "item": "bageling:strawberry_jam_bagel"
         }
       }
     }

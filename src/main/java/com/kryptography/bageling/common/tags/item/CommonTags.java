@@ -13,6 +13,7 @@ public class CommonTags {
     public static final TagKey<Item> FOODS_RAW_SALMON = commonItemTag("raw_fishes/salmon");
     public static final TagKey<Item> FOODS_COOKED_BACON = commonItemTag("cooked_bacon");
     public static final TagKey<Item> FOODS_COOKED_EGG = commonItemTag("cooked_eggs");
+    public static final TagKey<Item> FRUITS_STRAWBERRY = commonItemTag("fruits/strawberry");
 
     private static TagKey<Item> commonItemTag(String path) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", path));

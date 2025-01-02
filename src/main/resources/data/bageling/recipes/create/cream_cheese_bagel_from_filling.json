@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "recipe": {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "bageling:bagel"
+          },
+          {
+            "amount": 250,
+            "fluidTag": "forge:milk"
+          }
+        ],
+        "results": [
+          {
+            "item": "bageling:cream_cheese_bagel"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import java.util.Optional;
 import java.util.function.Supplier;
 
 public enum Mods {
+    NEAPOLITAN,
     FARMERSDELIGHT,
     CREATE;
     public final String id;

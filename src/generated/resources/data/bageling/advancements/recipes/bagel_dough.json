@@ -1,0 +1,54 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_dough": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:dough"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "bageling:bagel_dough"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_dough",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "bageling:bagel_dough"
+          ]
+        },
+        "sends_telemetry_event": false
+      },
+      "conditions": [
+        {
+          "type": "forge:or",
+          "values": [
+            {
+              "type": "forge:mod_loaded",
+              "modid": "create"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "farmersdelight"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -65,6 +65,9 @@ public class ModData {
             addAfter(event, Items.HONEY_BOTTLE, ModItems.GLOW_BERRY_JAM_BAGEL.get());
             addAfter(event, Items.HONEY_BOTTLE, ModItems.SWEET_BERRY_JAM_BAGEL.get());
             addAfter(event, Items.HONEY_BOTTLE, ModItems.APPLE_JAM_BAGEL.get());
+            if (Mods.NEAPOLITAN.isLoaded()) {
+                addAfter(event, ModItems.SWEET_BERRY_JAM_BAGEL.get(), ModItems.STRAWBERRY_JAM_BAGEL.get());
+            }
         }
 
     }

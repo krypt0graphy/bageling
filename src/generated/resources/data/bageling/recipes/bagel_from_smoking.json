@@ -1,10 +1,32 @@
 {
-  "type": "minecraft:smoking",
-  "category": "food",
-  "cookingtime": 75,
-  "experience": 0.35,
-  "ingredient": {
-    "item": "bageling:bagel_dough"
-  },
-  "result": "bageling:bagel"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:or",
+          "values": [
+            {
+              "type": "forge:mod_loaded",
+              "modid": "create"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "farmersdelight"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smoking",
+        "category": "food",
+        "cookingtime": 75,
+        "experience": 0.35,
+        "ingredient": {
+          "item": "bageling:bagel_dough"
+        },
+        "result": "bageling:bagel"
+      }
+    }
+  ]
 }
